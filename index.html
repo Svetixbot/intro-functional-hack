@@ -1,63 +1,85 @@
-# Functional hack exercise
+<article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="user-content-functional-style-calculator" class="anchor" href="#functional-style-calculator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Functional programming</h1>
 
-## Setup, Install and download all the things
+<h2>
+<a name="user-content-setup-install-and-download-all-the-things" class="anchor" href="#setup-install-and-download-all-the-things" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup, Install and download all the things</h2>
 
-### Install sbt
+<h3>
+<a name="user-content-install-sbt" class="anchor" href="#install-sbt" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install sbt</h3>
 
-	$ brew install sbt
+<pre><code>$ brew install sbt
+</code></pre>
 
-### Clone the repo
+<h3>
+<a name="user-content-clone-the-repo" class="anchor" href="#clone-the-repo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clone the repo</h3>
 
-	$ git clone https://github.com/Svetixbot/calculator.git
-	
-### Run this thing
+<pre><code>$ git clone https://github.com/Svetixbot/calculator.git
+</code></pre>
 
-	$ cd calculator
-	$ sbt
+<h3>
+<a name="user-content-run-this-thing" class="anchor" href="#run-this-thing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run this thing</h3>
 
-### Compile
+<pre><code>$ cd calculator
+$ sbt
+</code></pre>
 
-	> compile
+<h3>
+<a name="user-content-compile" class="anchor" href="#compile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compile</h3>
 
-### Make sure tests are green
+<pre><code>&gt; compile
+</code></pre>
 
-	> test	
+<h3>
+<a name="user-content-make-sure-tests-are-green" class="anchor" href="#make-sure-tests-are-green" aria-hidden="true"><span class="octicon octicon-link"></span></a>Make sure tests are green</h3>
 
-### Install IDE of choice ?
+<pre><code>&gt; test  
+</code></pre>
 
-## *	[IntelliJIDEA 14 EAP](http://confluence.jetbrains.com/display/IDEADEV/IDEA+14+EAP) + [install Scala plugin](http://confluence.jetbrains.com/display/SCA/Getting+Started+with+IntelliJ+IDEA+Scala+Plugin)
+<h3>
+<a name="user-content-install-ide-of-choice-" class="anchor" href="#install-ide-of-choice-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install IDE of choice ?</h3>
 
-IntelliJIDEA should be able to open the project by File/Open (dont forget to install Scala Plugin)
+<h2>
+<a name="user-content-----intellijidea-14-eap--install-scala-plugin" class="anchor" href="#----intellijidea-14-eap--install-scala-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>*    <a href="http://confluence.jetbrains.com/display/IDEADEV/IDEA+14+EAP">IntelliJIDEA 14 EAP</a> + <a href="http://confluence.jetbrains.com/display/SCA/Getting+Started+with+IntelliJ+IDEA+Scala+Plugin">install Scala plugin</a>
+</h2>
 
-## *	[ScalaIDE === Eclipse](http://scala-ide.org/)
+<p>IntelliJIDEA should be able to open the project by File/Open (dont forget to install Scala Plugin)</p>
 
-Eclipse requires special command to run:
+<h2>
+<a name="user-content-----scalaide--eclipse" class="anchor" href="#----scalaide--eclipse" aria-hidden="true"><span class="octicon octicon-link"></span></a>*    <a href="http://scala-ide.org/">ScalaIDE === Eclipse</a>
+</h2>
 
-	$ sbt eclipse
+<p>Eclipse requires special command to run:</p>
 
-After its done go to Eclipse and do File/Import -> Existing Projects into workspace
+<pre><code>$ sbt eclipse
+</code></pre>
 
-## Develop
+<p>After its done go to Eclipse and do File/Import -&gt; Existing Projects into workspace</p>
 
-Compile
+<h2>
+<a name="user-content-develop" class="anchor" href="#develop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Develop</h2>
 
-	> compile
+<p>Compile</p>
 
-Run tests
+<pre><code>&gt; compile
+</code></pre>
 
-	> test
+<p>Run tests</p>
 
-Run single test
+<pre><code>&gt; test
+</code></pre>
 
-	> test-only com.meow.meow.CatSpec
+<p>Run single test</p>
 
-Run compile in a background
+<pre><code>&gt; test-only com.meow.meow.CatSpec
+</code></pre>
 
-	> ~compile
+<p>Run compile in a background</p>
 
-Run tests in a background
+<pre><code>&gt; ~compile
+</code></pre>
 
-	> ~test
-	> ~test-only com.meow.meow.CatSpec
+<p>Run tests in a background</p>
 
-	
+<pre><code>&gt; ~test
+&gt; ~test-only com.meow.meow.CatSpec
+</code></pre></article>
