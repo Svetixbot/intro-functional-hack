@@ -93,6 +93,10 @@ h4 {
 	margin-top: 20px;
 }
 
+.row {
+	padding-top: 10px;
+}
+
 /* Useful classes and styles */
 a.github-ribbon {
 	position: absolute;
@@ -100,8 +104,6 @@ a.github-ribbon {
 	left: 0;
 	border: 0;
 }
-
-
 
 code {
 	margin-top: 15px;
