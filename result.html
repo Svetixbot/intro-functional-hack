@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>Introduction to functional programming with Scala</title>
+
+<xmp theme="united" style="display:none;">
+
+*   [Back](instructions.html)
+
+***
+
+###Exercise intructions
+
+### Result.scala
+
+Result represents a value of our calculations. Have a look at the signature of our main method 'run'
+
+		def run(operation: String): Result[Int]
+
+ Result is either a value (natural number) or an error:
+
+ 		val calculatorResult = run("1 + 3")
+ 		> calculatorResult: com.whc.calculator.Ok[Int] = Ok(4)
+
+ 		val calculatorResult = run("1 + blah")
+ 		> calculatorResult: com.whc.calculator.Fail[Int] = Fail(UnexpectedInput(b))
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>

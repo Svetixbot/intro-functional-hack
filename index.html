@@ -9,6 +9,48 @@
 
 ***
 
+### Some useful stuff
+
+* Run sbt in the same directory with calculator project. It will run for you the sbt console.
+		
+		sbt
+
+* Inside of the sbt console
+
+	* To compile:
+
+			compile		
+		
+		*check this one out too, it will run compile in a background:*
+
+			~compile
+
+		*to exit the infinite loop of compiling just press 'Enter'	
+	
+	* To run the tests: 
+
+			test
+
+		*or to run them continuously in a background:*
+
+			~test	
+		
+		*Press enter to exit the infinite loop of running tests*			
+
+	* To run scala repl
+
+			console		
+
+		* You can import all the project files by: 
+
+				import com.whc.calculator._
+
+		* You can exit scala repl by pressing ctrl + D	
+
+	* To exit sbt
+	
+			exit		
+
 </xmp>
 
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>

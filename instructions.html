@@ -23,17 +23,52 @@ It should
 * calculate the expression
 * return a Result of this operation. A result type represents one of our errors or a success.
 
+*** 
+
 ### What to do
 
 Have you [installed](install.html) all the stuff and cloned the [repo](https://github.com/Svetixbot/calculator)?
-Check out the project structure. We already have unit tests written for the application. Your task is to fix the tests by implemeting a solution.
+Check out the project structure. 
 
-* Start by removing ignore flag from one of the tests for CalculatorSpec
+![Project structure](project.png)
 
-* Run the tests with 
-		sbt test
+Each part of this application *Calculator, Result and Parser* has corresponsing suite of tests/specs *CalculatorSpec, ResultSpec, ParserSpec*
 
-* Did it fail? Fix it!	
+Ex 1: [Result](result.html)
+
+* Run the tests for the ResultSpec
+
+		~test-only com.whc.calculator.ResultSpec
+
+	* *It will run the test suite for the ResultSpec in a background*
+	* *Any time you change ResultSpec file, sbt will re-run these tests*
+	* *To exit this infinite loop of running just press Enter * 		
+	
+* Start uncommenting property tests, one at a time and fix them.
+* Check the comments in a Result file, it will give you some hints.
+
+
+Ex 2: [Parser](parser.html) 
+
+* Run the tests for ParserSpec the same way you run it for ResultSpec
+		~test-only com.whc.calculator.ParserSpec
+
+* Start uncommenting property tests one by one and fixing them
+* Check the comments in a Parser file, it may give you some hints
+
+Ex 3: [Calculator](calculator.html). 
+
+* Run the tests for the CalculatorSpec, the same way, really.
+* Replace 'ignore' word with 'it', one test at a time.
+
+Ex 4, Advanced: try to implement division operaiton
+
+		8 % 2 should result into Ok(4)
+
+Ex 5, Advanced: try to implemet operations with rational numbers. Feel free to use any separator you like:
+
+		8.2 + 0.8 should result into Ok(9)
+				
 
 </xmp>
 
