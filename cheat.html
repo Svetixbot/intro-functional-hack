@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title>Introduction to functional programming with Scala</title>
+
+<xmp theme="united" style="display:none;">
+
+*   [Back](index.html)
+
+***
+
+
+### Cheat sheet
+
+#### Functions are everywhere!
+
+This is a function which accepts Int as an input and returns String as an output:
+
+		val myFunction: Int => String = (i => i.toString)
+		val result = myFunction(1) // Invoke it like this
+		result: String = 1 // This will be the result
+
+This is a funciton which accepts another function 'f' as a parameter:
+
+		def map(f: Int => String) = ...
+
+And this is a function which returns another function... It accepts amount of type Money and it returs a function which accepts a tuple (Account, Transaction) and returs a Balance.
+
+		def changeBalance(amount: Money): (Account, Transaction) => Balance		
+
+#### Pattern matching
+
+This is a very powerfull mechanism of checking the value of your variables:
+
+		operation match {
+		    case '+' => a + b
+		    case '-' => a - b
+		    case '*' => a * b
+		  }
+
+What does it mean? Well, something like this:
+
+		if (operation == '+') {
+			return a + b
+		} else if (operation == '-') {
+			return a - b
+		} else if (operation == '*') {
+			return a * b
+		}	   
+
+#### Fold, Map, FlatMap
+
+Those functions are very heavily used on all the sequence-type objects like List, Array, Dictionary. 
+
+##### Fold
+
+Simple task, calculate a sum of all the elements in an array.
+	
+		val nums = List(1, 2, 3, 4, 5)
+		 
+		var sum = 0
+		for (n <- nums) {
+		  sum += n
+		}
+
+Fold is abstracting the iteration process for you by providing a way to pass a function as a parameter. This function will be applied on each element:
+
+		val nums = List(1, 2, 3, 4, 5)
+		val sum = nums.foldLeft(0) { (total, n) =>
+		  total + n
+		} 		
+
+#### Map
+
+		val list = List(1,2,3)
+		def g(v: Int) = v + 1
+		l.map(x => g(x)) == will be resolved into => List(2,3,4)
+
+#### flatmap
+
+It does the same thing as map, but it also flattens the output result.
+
+		val list = List(1,2,3)
+		def g(v: Int) = List(v-1, v, v+1)
+
+		l.map(x => g(x)) == will be resolved into => List(List(0,1,2), List(1,2,3), List(2,3,4))
+
+		l.flatmap(x => g(x)) = List(0,1,2,1,2,3,2,3,4)
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
